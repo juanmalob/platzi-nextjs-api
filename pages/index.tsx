@@ -1,13 +1,12 @@
 import React, { useState, useEffect, FunctionComponent } from 'react'
 import Navbar from '@components/Navbar/Navbar'
-
+import fetch from 'isomorphic-unfetch'
 const HomePage = () => {
   const [products, setProducts] = useState<TProduct[]>([])
 
   useEffect(() => {
     try {
-      window
-        .fetch('/api/avo')
+      fetch('/api/avo')
         .then((response) => response.json())
         .then(({ data, length }) => {
           console.log('hay datos')
@@ -27,9 +26,13 @@ const HomePage = () => {
       <div>Listado de productos</div>
       <div>
         {products?.map((product, key) => (
-          <p key={key}>
-            {product.id}-<span>{product.name}</span>
-          </p>
+          <div>
+            <p>{key}</p>
+            <p key={key}>
+              {product.id}-<span>{product.name}</span>
+            </p>
+            <a href={`/product/${product.id}`}>{product.name}</a>
+          </div>
         ))}
       </div>
       <br />
