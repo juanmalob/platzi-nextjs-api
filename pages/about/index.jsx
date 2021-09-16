@@ -1,7 +1,7 @@
-import ButtonOk from '@components/general/ButtonOk'
 import React from 'react'
-import Navbar from '../../components/Navbar/Navbar'
+//import Navbar from '../../components/Navbar/Navbar'
 import { Rating, Button, Icon } from 'semantic-ui-react'
+import ButtonOk from '../../components/general/ButtonOk'
 
 const AboutPage = () => {
   return (

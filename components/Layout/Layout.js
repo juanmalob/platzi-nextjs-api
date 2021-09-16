@@ -1,17 +1,18 @@
 //snipet rafce
-import Navbar from '@components/Navbar/Navbar'
+import { Navbar } from '../Navbar/Navbar'
+
 import React from 'react'
 //module CSS
 //import styles from './layout.module.css'
 
-const Layout: React.FC = ({ children }) => {
+const Layout = ({ children }) => {
   /*Esto iria dentro del return <div className={styles.container}>*/
   return (
     <div>
       <Navbar />
       {children}
       <footer className="container">This is the footer</footer>
-      {/* <!-- Texto --> */}
+      {/* <!-- inline css js --> */}
       <style jsx>{`
         .container {
           background: salmon;

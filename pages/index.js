@@ -1,8 +1,8 @@
 import React, { useState, useEffect, FunctionComponent } from 'react'
-import Navbar from '@components/Navbar/Navbar'
+//import Navbar from '@components/Navbar/Navbar'
 import fetch from 'isomorphic-unfetch'
 const HomePage = () => {
-  const [products, setProducts] = useState<TProduct[]>([])
+  const [products, setProducts] = useState([])
 
   useEffect(() => {
     try {
@@ -19,7 +19,7 @@ const HomePage = () => {
 
   console.log(products)
   return (
-    <div>
+    <div className="container">
       {/* <Navbar /> */}
       <div>Platzi and Next.js!</div>
       <br />

@@ -1,9 +1,13 @@
 import { AppProps } from 'next/app'
-import Layout from 'components/Layout/Layout'
-import 'semantic-ui-css/semantic.min.css'
+import Layout from '../components/Layout/Layout'
+//import 'semantic-ui-css/semantic.min.css'
+
+// add bootstrap css
+import 'bootstrap/dist/css/bootstrap.css'
+
 //globat.css
 //import '../style.css'
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }) {
   // Providers - Context/Providers, themes , data
   // Layout
   // props adicionales
